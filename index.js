@@ -22,7 +22,7 @@ class FileTreeSelectionPrompt extends Base {
 	getDirectoryContents(path=this.currentDirectory){
 		const dirContents = fs.readdirSync(path);
 		const mapped = dirContents.map(item => {
-			const fullPath = path + '\\' + item;
+			const fullPath = path + '/' + item;
 			return fs.lstatSync(fullPath).isDirectory() ? 
 				{fullPath: fullPath, isDirectory: true, displayString: figures.pointer + ' ' + item} : 
 				{fullPath: fullPath, isDirectory: false, displayString: item};
