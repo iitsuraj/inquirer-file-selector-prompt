@@ -263,9 +263,9 @@ class FileTreeSelectionPrompt extends Base {
 	}
 
 	onEscKey(){
-		const splCurrentDirectory = this.currentDirectory.split('\\')
+		const splCurrentDirectory = this.currentDirectory.split('/')
 		splCurrentDirectory.pop()
-		this.renderNewDirectory(splCurrentDirectory.join('\\'))
+		this.renderNewDirectory(splCurrentDirectory.join('/'))
 	}
 
 }
